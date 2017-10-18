@@ -7,9 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clustri.Crawl.Console", "Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clustri.Crawl.Spider", "Clustri.Crawl.Spider\Clustri.Crawl.Spider.csproj", "{85EEB776-CD0E-4CD9-8F33-0C779E979D6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clustri.Core", "Clustri.Core\Clustri.Core.csproj", "{ED069BB5-D7CA-48EC-8F57-77ECBCC1DDAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clustri.Core", "Clustri.Core\Clustri.Core.csproj", "{ED069BB5-D7CA-48EC-8F57-77ECBCC1DDAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clustri.Neo4J", "Clustri.Neo4J\Clustri.Neo4J.csproj", "{D64C0E4B-2B4E-431E-BAA6-D012FBF5A273}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clustri.Neo4J", "Clustri.Neo4J\Clustri.Neo4J.csproj", "{D64C0E4B-2B4E-431E-BAA6-D012FBF5A273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clustri.Crawl.Crawler", "Clustri.Crawl.Crawler\Clustri.Crawl.Crawler.csproj", "{9017C333-6E50-4F39-843F-3FF6C34BC93B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D64C0E4B-2B4E-431E-BAA6-D012FBF5A273}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D64C0E4B-2B4E-431E-BAA6-D012FBF5A273}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D64C0E4B-2B4E-431E-BAA6-D012FBF5A273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9017C333-6E50-4F39-843F-3FF6C34BC93B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9017C333-6E50-4F39-843F-3FF6C34BC93B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9017C333-6E50-4F39-843F-3FF6C34BC93B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9017C333-6E50-4F39-843F-3FF6C34BC93B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
