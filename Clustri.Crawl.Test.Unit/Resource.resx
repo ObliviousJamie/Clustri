@@ -1,0 +1,949 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SteamPage" xml:space="preserve">
+    <value>&lt;!DOCTYPE html&gt;
+&lt;html class=" responsive" lang="en"&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+			&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
+		&lt;meta name="theme-color" content="#171a21"&gt;
+		&lt;title&gt;Steam Community :: Stagmoor's Friends&lt;/title&gt;
+	&lt;link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"&gt;
+
+	&lt;link href="http://steamcommunity-a.akamaihd.net/public/shared/css/motiva_sans.css?v=Sd0odMs2NjL1" rel="stylesheet" type="text/css" &gt;
+&lt;link href="http://steamcommunity-a.akamaihd.net/public/shared/css/buttons.css?v=FMXZx9fv9yp_" rel="stylesheet" type="text/css" &gt;
+&lt;link href="http://steamcommunity-a.akamaihd.net/public/shared/css/shared_global.css?v=ezCZ54xw7bxo" rel="stylesheet" type="text/css" &gt;
+&lt;link href="http://steamcommunity-a.akamaihd.net/public/css/globalv2.css?v=3X1Hz39cVBqV" rel="stylesheet" type="text/css" &gt;
+&lt;link href="http://steamcommunity-a.akamaihd.net/public/css/skin_1/profilev2.css?v=N-o_OmTeTC4p" rel="stylesheet" type="text/css" &gt;
+&lt;link href="http://steamcommunity-a.akamaihd.net/public/shared/css/shared_responsive.css?v=Dm6dKxyudx2Y" rel="stylesheet" type="text/css" &gt;
+&lt;link href="http://steamcommunity-a.akamaihd.net/public/css/skin_1/header.css?v=tZYBxDBV1D4c" rel="stylesheet" type="text/css" &gt;
+			&lt;script&gt;
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-33779068-1', 'auto', {
+					'sampleRate': 0.4				});
+				ga('set', 'dimension1', false );
+				ga('set', 'dimension2', 'External' );
+				ga('set', 'dimension3', 'profiles' );
+				ga('set', 'dimension4', "profiles\/friends" );
+				ga('send', 'pageview');
+
+			&lt;/script&gt;
+			&lt;script type="text/javascript" src="http://steamcommunity-a.akamaihd.net/public/javascript/prototype-1.7.js?v=.55t44gwuwgvw" &gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://steamcommunity-a.akamaihd.net/public/javascript/scriptaculous/_combined.js?v=9XVsa_Ni33oN&amp;amp;l=english&amp;amp;load=effects,controls,slider,dragdrop" &gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://steamcommunity-a.akamaihd.net/public/javascript/global.js?v=FOZ8PR9YQrt_&amp;amp;l=english" &gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://steamcommunity-a.akamaihd.net/public/javascript/jquery-1.11.1.min.js?v=.isFTSRckeNhC" &gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://steamcommunity-a.akamaihd.net/public/shared/javascript/tooltip.js?v=.gcRSUfx-SLlh" &gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://steamcommunity-a.akamaihd.net/public/shared/javascript/shared_global.js?v=cJsxXnKTNA5x&amp;amp;l=english" &gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;$J = jQuery.noConflict();
+if ( typeof JSON != 'object' || !JSON.stringify || !JSON.parse ) { document.write( "&lt;scr" + "ipt type=\"text\/javascript\" src=\"http:\/\/steamcommunity-a.akamaihd.net\/public\/javascript\/json2.js?v=pmScf4470EZP&amp;amp;l=english\" &gt;&lt;\/script&gt;\n" ); };
+&lt;/script&gt;&lt;script type="text/javascript" src="http://steamcommunity-a.akamaihd.net/public/shared/javascript/shared_responsive_adapter.js?v=qLEcRmcHn-kc&amp;amp;l=english" &gt;&lt;/script&gt;
+
+	
+						&lt;meta property="fb:app_id" content="105386699540688"&gt;
+			
+	
+			&lt;link rel="image_src" href="http://steamcommunity-a.akamaihd.net/public/shared/images/responsive/share_steam_logo.png"&gt;
+		&lt;meta property="og:image" content="http://steamcommunity-a.akamaihd.net/public/shared/images/responsive/share_steam_logo.png"&gt;
+					&lt;meta property="og:image:secure" content="https://steamcommunity-a.akamaihd.net/public/shared/images/responsive/share_steam_logo.png"&gt;
+			
+	
+	
+	&lt;/head&gt;
+&lt;body class="flat_page migrated_profile_page responsive_page"&gt;
+
+&lt;div class="responsive_page_frame with_header"&gt;
+
+						&lt;div class="responsive_page_menu_ctn mainmenu"&gt;
+				&lt;div class="responsive_page_menu"  id="responsive_page_menu"&gt;
+										&lt;div class="mainmenu_contents"&gt;
+						&lt;div class="mainmenu_contents_items"&gt;
+															&lt;a class="menuitem" href="https://steamcommunity.com/login/home/?goto=id%2Fstagmoor%2Ffriends%2F"&gt;
+									Login								&lt;/a&gt;
+								&lt;a class="menuitem supernav" href="http://store.steampowered.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_store"&gt;
+		Store	&lt;/a&gt;
+	&lt;div class="submenu_store" style="display: none;" data-submenuid="store"&gt;
+		&lt;a class="submenuitem" href="http://store.steampowered.com/"&gt;Featured&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://store.steampowered.com/explore/"&gt;Explore&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://store.steampowered.com/curators/"&gt;Curators&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://steamcommunity.com/my/wishlist/"&gt;Wishlist&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://store.steampowered.com/news/"&gt;News&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://store.steampowered.com/stats/"&gt;Stats&lt;/a&gt;
+	&lt;/div&gt;
+
+
+	&lt;a class="menuitem supernav" style="display: block" href="http://steamcommunity.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_community"&gt;
+		Community	&lt;/a&gt;
+	&lt;div class="submenu_community" style="display: none;" data-submenuid="community"&gt;
+		&lt;a class="submenuitem" href="http://steamcommunity.com/"&gt;Home&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://steamcommunity.com/discussions/"&gt;Discussions&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://steamcommunity.com/workshop/"&gt;Workshop&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://steamcommunity.com/market/"&gt;Market&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://steamcommunity.com/?subsection=broadcasts"&gt;Broadcasts&lt;/a&gt;
+					&lt;/div&gt;
+
+	
+
+	
+	
+	&lt;a class="menuitem" href="https://help.steampowered.com/en/"&gt;
+		Support	&lt;/a&gt;
+
+							&lt;div class="minor_menu_items"&gt;
+																&lt;div class="menuitem change_language_action"&gt;
+									Change language								&lt;/div&gt;
+																									&lt;div class="menuitem" onclick="Responsive_RequestDesktopView();"&gt;
+										View desktop website									&lt;/div&gt;
+															&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class="mainmenu_footer_spacer"&gt;&lt;/div&gt;
+						&lt;div class="mainmenu_footer"&gt;
+							&lt;div class="mainmenu_footer_logo"&gt;&lt;img src="http://steamcommunity-a.akamaihd.net/public/shared/images/responsive/logo_valve_footer.png"&gt;&lt;/div&gt;
+							© Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.							&lt;span class="mainmenu_valve_links"&gt;
+								&lt;a href="http://store.steampowered.com/privacy_agreement/" target="_blank"&gt;Privacy Policy&lt;/a&gt;
+								&amp;nbsp;| &amp;nbsp;&lt;a href="http://www.valvesoftware.com/legal.htm" target="_blank"&gt;Legal&lt;/a&gt;
+								&amp;nbsp;| &amp;nbsp;&lt;a href="http://store.steampowered.com/subscriber_agreement/" target="_blank"&gt;Steam Subscriber Agreement&lt;/a&gt;
+								&amp;nbsp;| &amp;nbsp;&lt;a href="http://store.steampowered.com/steam_refunds/" target="_blank"&gt;Refunds&lt;/a&gt;
+							&lt;/span&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+									&lt;/div&gt;
+			&lt;/div&gt;
+		
+		&lt;div class="responsive_local_menu_tab"&gt;
+
+		&lt;/div&gt;
+
+		&lt;div class="responsive_page_menu_ctn localmenu"&gt;
+			&lt;div class="responsive_page_menu"  id="responsive_page_local_menu"&gt;
+				&lt;div class="localmenu_content"&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+
+
+					&lt;div class="responsive_header"&gt;
+				&lt;div class="responsive_header_content"&gt;
+					&lt;div id="responsive_menu_logo"&gt;
+						&lt;img src="http://steamcommunity-a.akamaihd.net/public/shared/images/responsive/header_menu_hamburger.png" height="100%"&gt;
+											&lt;/div&gt;
+					&lt;div class="responsive_header_logo"&gt;
+						&lt;img src="http://steamcommunity-a.akamaihd.net/public/shared/images/responsive/header_logo.png" height="36" border="0" alt="STEAM"&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		
+		&lt;div class="responsive_page_content_overlay"&gt;
+
+		&lt;/div&gt;
+
+		&lt;div class="responsive_fixonscroll_ctn nonresponsive_hidden "&gt;
+		&lt;/div&gt;
+	
+	&lt;div class="responsive_page_content"&gt;
+
+		&lt;div id="global_header"&gt;
+	&lt;div class="content"&gt;
+		&lt;div class="logo"&gt;
+			&lt;span id="logo_holder"&gt;
+									&lt;a href="http://store.steampowered.com/"&gt;
+						&lt;img src="http://steamcommunity-a.akamaihd.net/public/shared/images/header/globalheader_logo.png?t=962016" width="176" height="44"&gt;
+					&lt;/a&gt;
+							&lt;/span&gt;
+			&lt;!--[if lt IE 7]&gt;
+			&lt;style type="text/css"&gt;
+				#logo_holder img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+				#logo_holder { display: inline-block; width: 176px; height: 44px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://steamcommunity-a.akamaihd.net/public/images/v5/globalheader_logo.png'); }
+			&lt;/style&gt;
+			&lt;![endif]--&gt;
+		&lt;/div&gt;
+
+			&lt;div class="supernav_container"&gt;
+	&lt;a class="menuitem supernav" href="http://store.steampowered.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_store"&gt;
+		STORE	&lt;/a&gt;
+	&lt;div class="submenu_store" style="display: none;" data-submenuid="store"&gt;
+		&lt;a class="submenuitem" href="http://store.steampowered.com/"&gt;Featured&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://store.steampowered.com/explore/"&gt;Explore&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://store.steampowered.com/curators/"&gt;Curators&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://steamcommunity.com/my/wishlist/"&gt;Wishlist&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://store.steampowered.com/news/"&gt;News&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://store.steampowered.com/stats/"&gt;Stats&lt;/a&gt;
+	&lt;/div&gt;
+
+
+	&lt;a class="menuitem supernav" style="display: block" href="http://steamcommunity.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_community"&gt;
+		COMMUNITY	&lt;/a&gt;
+	&lt;div class="submenu_community" style="display: none;" data-submenuid="community"&gt;
+		&lt;a class="submenuitem" href="http://steamcommunity.com/"&gt;Home&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://steamcommunity.com/discussions/"&gt;Discussions&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://steamcommunity.com/workshop/"&gt;Workshop&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://steamcommunity.com/market/"&gt;Market&lt;/a&gt;
+		&lt;a class="submenuitem" href="http://steamcommunity.com/?subsection=broadcasts"&gt;Broadcasts&lt;/a&gt;
+					&lt;/div&gt;
+
+	
+
+	
+			&lt;a class="menuitem" href="http://store.steampowered.com/about/"&gt;
+			ABOUT		&lt;/a&gt;
+	
+	&lt;a class="menuitem" href="https://help.steampowered.com/en/"&gt;
+		SUPPORT	&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;script type="text/javascript"&gt;
+		jQuery(function($) {
+			$('.tooltip').v_tooltip();
+			$('#global_header .supernav').v_tooltip({'location':'bottom', 'tooltipClass': 'supernav_content', 'offsetY':-4, 'offsetX': 1, 'horizontalSnap': 4, 'tooltipParent': '#global_header .supernav_container', 'correctForScreenSize': false});
+		});
+	&lt;/script&gt;
+
+		&lt;div id="global_actions"&gt;
+			&lt;div id="global_action_menu"&gt;
+									&lt;div class="header_installsteam_btn header_installsteam_btn_green"&gt;
+						&lt;div class="header_installsteam_btn_leftcap"&gt;&lt;/div&gt;
+						&lt;div class="header_installsteam_btn_rightcap"&gt;&lt;/div&gt;
+
+						&lt;a class="header_installsteam_btn_content" href="http://store.steampowered.com/about/"&gt;
+							Install Steam						&lt;/a&gt;
+					&lt;/div&gt;
+				
+				
+														&lt;a class="global_action_link" href="https://steamcommunity.com/login/home/?goto=id%2Fstagmoor%2Ffriends%2F"&gt;login&lt;/a&gt;
+					&amp;nbsp;|&amp;nbsp;
+					&lt;span class="pulldown global_action_link" id="language_pulldown" onclick="ShowMenu( this, 'language_dropdown', 'right' );"&gt;language&lt;/span&gt;
+					&lt;div class="popup_block_new" id="language_dropdown" style="display: none;"&gt;
+						&lt;div class="popup_body popup_menu"&gt;
+																																	&lt;a class="popup_menu_item tight" href="?l=bulgarian" onclick="ChangeLanguage( 'bulgarian' ); return false;"&gt;Български (Bulgarian)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=czech" onclick="ChangeLanguage( 'czech' ); return false;"&gt;čeština (Czech)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=danish" onclick="ChangeLanguage( 'danish' ); return false;"&gt;Dansk (Danish)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=dutch" onclick="ChangeLanguage( 'dutch' ); return false;"&gt;Nederlands (Dutch)&lt;/a&gt;
+																																			&lt;a class="popup_menu_item tight" href="?l=finnish" onclick="ChangeLanguage( 'finnish' ); return false;"&gt;Suomi (Finnish)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=french" onclick="ChangeLanguage( 'french' ); return false;"&gt;Français (French)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=german" onclick="ChangeLanguage( 'german' ); return false;"&gt;Deutsch (German)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=greek" onclick="ChangeLanguage( 'greek' ); return false;"&gt;Ελληνικά (Greek)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=hungarian" onclick="ChangeLanguage( 'hungarian' ); return false;"&gt;Magyar (Hungarian)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=italian" onclick="ChangeLanguage( 'italian' ); return false;"&gt;Italiano (Italian)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=japanese" onclick="ChangeLanguage( 'japanese' ); return false;"&gt;日本語 (Japanese)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=koreana" onclick="ChangeLanguage( 'koreana' ); return false;"&gt;한국어 (Korean)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=norwegian" onclick="ChangeLanguage( 'norwegian' ); return false;"&gt;Norsk (Norwegian)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=polish" onclick="ChangeLanguage( 'polish' ); return false;"&gt;Polski (Polish)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=portuguese" onclick="ChangeLanguage( 'portuguese' ); return false;"&gt;Português (Portuguese)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=brazilian" onclick="ChangeLanguage( 'brazilian' ); return false;"&gt;Português-Brasil (Portuguese-Brazil)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=romanian" onclick="ChangeLanguage( 'romanian' ); return false;"&gt;Română (Romanian)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=russian" onclick="ChangeLanguage( 'russian' ); return false;"&gt;Русский (Russian)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=schinese" onclick="ChangeLanguage( 'schinese' ); return false;"&gt;简体中文 (Simplified Chinese)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=spanish" onclick="ChangeLanguage( 'spanish' ); return false;"&gt;Español (Spanish)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=swedish" onclick="ChangeLanguage( 'swedish' ); return false;"&gt;Svenska (Swedish)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=tchinese" onclick="ChangeLanguage( 'tchinese' ); return false;"&gt;繁體中文 (Traditional Chinese)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=thai" onclick="ChangeLanguage( 'thai' ); return false;"&gt;ไทย (Thai)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=turkish" onclick="ChangeLanguage( 'turkish' ); return false;"&gt;Türkçe (Turkish)&lt;/a&gt;
+																										&lt;a class="popup_menu_item tight" href="?l=ukrainian" onclick="ChangeLanguage( 'ukrainian' ); return false;"&gt;Українська (Ukrainian)&lt;/a&gt;
+																						&lt;a class="popup_menu_item tight" href="http://translation.steampowered.com" target="_blank"&gt;Help us translate Steam&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+							&lt;/div&gt;
+					&lt;/div&gt;
+			&lt;/div&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+	g_sessionID = "489242d30aa072647295208f";
+	g_steamID = false;
+
+	// We always want to have the timezone cookie set for PHP to use
+	setTimezoneCookies();
+
+	$J( function() {
+
+		InitMiniprofileHovers();
+		InitEmoticonHovers();
+		window.BindCommunityTooltip = function( $Selector ) { $Selector.v_tooltip( {'tooltipClass': 'community_tooltip', 'dataName': 'communityTooltip' } ); };
+		BindCommunityTooltip( $J('[data-community-tooltip]') );
+	});
+
+	$J( function() { InitEconomyHovers( "http:\/\/steamcommunity-a.akamaihd.net\/public\/css\/skin_1\/economy.css?v=q6EkkWwqjgQx", "http:\/\/steamcommunity-a.akamaihd.net\/public\/javascript\/economy_common.js?v=tsXdRVB0yEaR&amp;l=english", "http:\/\/steamcommunity-a.akamaihd.net\/public\/javascript\/economy.js?v=jsMHcqsTyBbv&amp;l=english" );});&lt;/script&gt;
+		&lt;div class="responsive_page_template_content"&gt;
+
+			&lt;div class="pagecontent no_header profile_subpage_column"&gt;
+	&lt;div class="profile_small_header_bg"&gt;
+	&lt;div class="profile_small_header_texture"&gt;
+
+		&lt;div class="profile_small_header_text"&gt;
+			&lt;span class="profile_small_header_name"&gt;&lt;a class="whiteLink" href="http://steamcommunity.com/id/stagmoor"&gt;Stagmoor&lt;/a&gt;&lt;/span&gt;
+							&lt;span class="profile_small_header_arrow"&gt;&amp;raquo;&lt;/span&gt;
+				&lt;a class="whiteLink"  href="http://steamcommunity.com/id/stagmoor/friendscommon/"&gt;&lt;span class="profile_small_header_location"&gt;Friends&lt;/span&gt;&lt;/a&gt;
+			
+					&lt;/div&gt;
+		&lt;a href="http://steamcommunity.com/id/stagmoor"&gt;
+			&lt;div class="profile_small_header_avatar"&gt;
+				&lt;div class="playerAvatar medium online"&gt;
+					&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/ff/ffb2eab1c135e34d2a0db14001a95c081877883a_medium.jpg"&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/a&gt;
+			&lt;/div&gt;
+&lt;/div&gt;	&lt;!-- main body --&gt;
+	&lt;div id="BG_bottom" class="maincontent"&gt;
+
+		&lt;div class="profile_friends responsive_friendblocks" id="memberList"&gt;
+									&lt;div class="friendBlock persona in-game" data-miniprofile="88469994" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198048735722"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar in-game"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/b6/b6aaaee05e700322867be0338fb94a869aa1e513_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Big Papa Smurf&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		&lt;span class="linkFriend_in-game"&gt;In-Game&lt;br/&gt;Divinity: Original Sin 2&lt;/span&gt;
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona online" data-miniprofile="35081031" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/Galenas"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar online"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/79/795dd3b0bcf9ae1ce56b72d496b98bd9cbd8d099_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Galenas&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Online
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona online" data-miniprofile="68681666" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/Keetoxx"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar online"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/ae/aef485b97d82a69452a6949a5cfb28f3a95fbb6e_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Keetoxx&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Online
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona online" data-miniprofile="56355404" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198016621132"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar online"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/c1/c10cb2609dc43d5a2b5b7b08564156c2f08dfac0_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				modernleper&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Online
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona online" data-miniprofile="81909004" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/nssBoB"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar online"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/e4/e4af076a5f7498c530f45bd233b39e3c0b0519b6_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				nssBoB&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Online
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona online" data-miniprofile="148446368" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/tidywire"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar online"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/44/44fa96da10c2a38c29d2116720c6194be5930d0f_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				TidyWire&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Online
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona online" data-miniprofile="70665159" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/TurbidRobin"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar online"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/ae/ae1e0a475bf79aca5dfa37bacbe7b26e0c7fabac_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				TurbidRobin ♚ ☭ ✌&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Online
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona online" data-miniprofile="91896865" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/Darillion"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar online"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/23/238fb9795d123442c5d6e13dbd570c56b8bfa21d_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				샘치 (Darillion)&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Online
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="31959776" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561197992225504"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/a7/a7ece5d2ac4b663144b93a818b868f69ed5eb785_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Adu&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 4 days ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="178764902" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198139030630"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/fe/fe4926c1a683854dd7b1b42616c54f193c2bcc9f_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Bear in Cupboard&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="55001310" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/1GT"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/f3/f31df0bd86ab01f3acf26e0d6901c87dbfad5064_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Bill Door&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 17 hrs, 3 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="45235550" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/tobybirkett"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/f9/f90522690eb1b929b3dd9313658ba4e16797f5e8_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Birkalo&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 13 hrs, 19 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="30499760" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561197990765488"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/2f/2f7c93c0b0a1f834e4d2fa7fc2aa87df04154ace_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Carnifex&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="87127162" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198047392890"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/63/633aae82cd88e5edc96b7c4f08b7b7f0303a4448_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Cdre. Hans&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 8 days ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="369587984" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198329853712"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/4f/4f4bba758f71ec4bd6643c3b30ae777e1575fb53_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				chems&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 15 hrs, 30 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="65684300" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/cyb3rst4r"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/c3/c3f6d7a1c1f2f17c3c14177db4402964282500ca_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				cyber&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 15 hrs, 51 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="123783517" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/darezzi"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/4a/4acd6468641784abad34097c03e25bc042e9f59e_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				darezzi&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 9 hrs, 21 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="89794939" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198050060667"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/47/470151a5df0ddf2e8ce53abb1fb8d7577d2b7783_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Dead_Sunrise90&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="78012423" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198038278151"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/90/906680771cc1c4b21948301103d7340a63c91e2a_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Definitely not a war criminal&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="82635203" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/bangtast1c"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/9a/9a1c7a6076ed84e096e033939e5a6cdda0358179_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Dr. WaifuPillow&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 10 hrs, 45 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="250463256" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198210728984"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/19/191455da7d6f924fa34fd6ef144fb73174b3eb1a_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Firacex&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 12 hrs, 33 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="77773519" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198038039247"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/4c/4cf72bd4c2b6f85f0539bef66bb325cddf006009_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				gigoloJack&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 3 hrs, 40 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="51490356" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/Hiddos"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/a9/a973d87250b9fa93f36ddb8f971a12611cb3c146_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Hiddos&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 16 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="103926791" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/Influences"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/fe/fe4bc82cc395483a042c17fc7d0f368a6f2a8338_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Influences&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 2 hrs, 59 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="356668568" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198316934296"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/16/16f53b4ae573ffa58e47985b067d3c8ebf34e252_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Jahnie4Sho｜やに　ご　‘‘ぷろ‘‘&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 17 hrs, 4 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="79046761" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198039312489"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/18/182a5d47ae178712bd35eecd7dc37b255ff13c34_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				JellBaus&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 13 hrs, 20 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="64979205" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198025244933"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/d9/d956bc4013e234d687e01e910297bd80cde68345_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Karde&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 3 days ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="62225400" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198022491128"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/0f/0fd23bb0bdd53036999c603352f085f0b167949a_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Kid Vengeance&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 228 days ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="101934022" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/kray1337"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/50/500311c3c282a486a94edb838490f3b347f1e9bf_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				krkr&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 16 hrs, 47 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="127004045" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198087269773"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/24/2404e2500989f283f7af4bd4096586833ae158a1_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Panda Hoodie&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 663 days ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="69296821" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/darcerail"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/23/237fa25e35fb0f262ae4c3fdee129cc248de2590_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				PotatoFarmerFred&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 34 hrs, 12 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="88825018" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/rivaan85"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/64/646d3fcf9903364f618238ae4e145d0c8350f1fa_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Rivaan&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 5 days ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="39354404" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/robinmitra"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/05/057aed84d9ac4a593d9c7a398ce3953b1ba91249_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				robinmitra&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 30 hrs, 9 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="85421323" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198045687051"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				ryan1801online&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="137261304" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198097527032"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/aa/aa30cc2d0d71ff326289edef5693937e5b6bffad_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Sidd_Online&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 121 days ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="10112618" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561197970378346"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/60/6013961076e365b8ab3f57141b3498c50dee6fb9_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Skumbjörn&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 14 hrs, 14 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="63822819" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/SmurfZz"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/c2/c20c572242473a48badb6072e1ff07f4fbd7b036_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				Sloooowpoke&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 5 days ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="130408665" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198090674393"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/8e/8e649e9eac9ea2e9613661867bc475a1ae633a9b_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				SOBstick&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 12 hrs, 37 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="79063658" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/bongo1991"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/bb/bb3b5125ca724033479b5fa7d9ba8b7f34d88bfa_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				SuperBongoTime&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 24 hrs, 46 mins ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="137573165" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198097838893"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/2b/2b7dcc0b128e2446cbd34dd138251be4c399b0de_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				U WANT SUM FUK?&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 11 days ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="62800759" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/profiles/76561198023066487"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				[BVAR]GHOST&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 2 days ago
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+											&lt;div class="friendBlock persona offline" data-miniprofile="95253791" &gt;
+						&lt;a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/markh23"&gt;&lt;/a&gt;
+															&lt;div class="playerAvatar offline"&gt;
+				&lt;img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/7a/7aa47c6b2409c4bbdb0caa3d50b2010f379a4821_medium.jpg"&gt;
+			&lt;/div&gt;
+			&lt;div class="friendBlockContent"&gt;
+				\[T]/&lt;br&gt;
+				&lt;span class="friendSmallText"&gt;
+		Last Online 
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+								&lt;div style="clear: left;"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div style="clear: left;"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+		&lt;/div&gt;	&lt;!-- responsive_page_legacy_content --&gt;
+
+			&lt;div id="footer_spacer"&gt;&lt;/div&gt;
+	&lt;div id="footer_responsive_optin_spacer"&gt;&lt;/div&gt;
+	&lt;div id="footer"&gt;
+		&lt;div class="footer_content"&gt;
+			&lt;span id="footerLogo"&gt;&lt;img src="http://steamcommunity-a.akamaihd.net/public/images/skin_1/footerLogo_valve.png?v=1" width="96" height="26" border="0" alt="Valve Logo" /&gt;&lt;/span&gt;
+			&lt;span id="footerText"&gt;
+				&amp;copy; Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.&lt;br/&gt;Some geospatial data on this website is provided by &lt;a href="https://steamcommunity.com/linkfilter/?url=http://www.geonames.org" target="_blank" rel="noreferrer"&gt;geonames.org&lt;/a&gt;.				&lt;br&gt;
+									&lt;span class="valve_links"&gt;
+						&lt;a href="http://store.steampowered.com/privacy_agreement/" target="_blank"&gt;Privacy Policy&lt;/a&gt;
+						&amp;nbsp; | &amp;nbsp;&lt;a href="http://www.valvesoftware.com/legal.htm" target="_blank"&gt;Legal&lt;/a&gt;
+						&amp;nbsp;| &amp;nbsp;&lt;a href="http://store.steampowered.com/subscriber_agreement/" target="_blank"&gt;Steam Subscriber Agreement&lt;/a&gt;
+					&lt;/span&gt;
+							&lt;/span&gt;
+		&lt;/div&gt;
+					&lt;div class="responsive_optin_link"&gt;
+				&lt;div class="btn_medium btnv6_grey_black" onclick="Responsive_RequestMobileView()"&gt;
+					&lt;span&gt;View mobile website&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;/div&gt;
+	
+	&lt;/div&gt;	&lt;!-- responsive_page_content --&gt;
+
+&lt;/div&gt;	&lt;!-- responsive_page_frame --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+    <comment>Raw HTML from "Stagmoor" steam page</comment>
+  </data>
+</root>

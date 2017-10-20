@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Clustri.Crawl.Crawler.Interfaces
 {
     public interface IHyperLinkParser
     {
-        Tuple<IExploredVertex, IEnumerable<IUnexploredVertex>> ParseFriends(string userId);
+        IEnumerable<string> ParseUser(IProfile profile);
     }
 }
