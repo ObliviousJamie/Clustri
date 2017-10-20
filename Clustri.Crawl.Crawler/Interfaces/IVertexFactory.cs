@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Clustri.Crawl.Crawler.Interfaces
 {
     public interface IVertexFactory
     {
-        IVertex CreateNode();
+        IVertex Create(IProfile profile, IEnumerable<IProfile> edges);
     }
 }

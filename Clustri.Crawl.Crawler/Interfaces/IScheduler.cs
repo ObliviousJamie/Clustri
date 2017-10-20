@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Clustri.Crawl.Crawler.Interfaces
 {
-    public interface IScheduler : IEnumerable<IVertex>
+    public interface IScheduler : IEnumerable<IProfile>
     {
-        void Add(Tuple<IExploredVertex, IEnumerable<IUnexploredVertex>> tuple);
+        void Add(IProfile profile);
+        void Add(IEnumerable<IProfile> profiles);
     }
 }

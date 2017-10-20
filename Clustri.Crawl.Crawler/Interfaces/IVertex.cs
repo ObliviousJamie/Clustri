@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Clustri.Crawl.Crawler.Interfaces
 {
     public interface IVertex
     {
         int Degree { get; }
-        string Name { get; }
+        string Id { get; }
+        IEnumerable<IProfile> Degrees { get;  }
     }
 }
