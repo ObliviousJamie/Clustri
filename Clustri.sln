@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clustri.Core", "Clustri.Cor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clustri.Neo4J", "Clustri.Neo4J\Clustri.Neo4J.csproj", "{D64C0E4B-2B4E-431E-BAA6-D012FBF5A273}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clustri.Crawl.Crawler", "Clustri.Crawl.Crawler\Clustri.Crawl.Crawler.csproj", "{9017C333-6E50-4F39-843F-3FF6C34BC93B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clustri.Crawl.Crawler", "Clustri.Crawl.Crawler\Clustri.Crawl.Crawler.csproj", "{9017C333-6E50-4F39-843F-3FF6C34BC93B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clustri.Crawl.Test.Unit", "Clustri.Crawl.Test.Unit\Clustri.Crawl.Test.Unit.csproj", "{E1F321CE-1E89-4C37-839F-69B9F22848C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{9017C333-6E50-4F39-843F-3FF6C34BC93B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9017C333-6E50-4F39-843F-3FF6C34BC93B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9017C333-6E50-4F39-843F-3FF6C34BC93B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F321CE-1E89-4C37-839F-69B9F22848C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F321CE-1E89-4C37-839F-69B9F22848C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F321CE-1E89-4C37-839F-69B9F22848C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F321CE-1E89-4C37-839F-69B9F22848C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

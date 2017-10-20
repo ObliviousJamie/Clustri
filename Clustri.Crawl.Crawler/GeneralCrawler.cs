@@ -7,38 +7,32 @@ namespace Clustri.Crawl.Crawler
     public class GeneralCrawler : IWebCrawler
     {
         private readonly IScheduler _scheduler;
-        private readonly IHyperlinkParserFactory _hyperlinkParserFactory;
+        private readonly INodeParser _parser;
 
-        public GeneralCrawler(IScheduler scheduler, IHyperlinkParserFactory hyperlinkParserFactory)
+        public GeneralCrawler(IScheduler scheduler, INodeParser parser )
         {
             _scheduler = scheduler;
-            _hyperlinkParserFactory = hyperlinkParserFactory;
+            _parser = parser;
         }
 
 
-        public IEnumerable<IExploredVertex> Crawl(Domain domain, string userId)
+        public IEnumerable<IVertex> Crawl(Domain domain, string userId)
         {
-            var hyperlinkParser = _hyperlinkParserFactory.Create(domain); 
             //Parse first page
-            var exploredTuple = ParsePage(userId, hyperlinkParser);
-            _scheduler.Add(exploredTuple);
+            var exploredVertex = _parser.ParseFriends(userId);
+            _scheduler.Add(exploredVertex.Degrees);
 
-            yield return exploredTuple.Item1;
+            yield return exploredVertex;
             //Next scheduled pages
             foreach (var unexploredVertex in _scheduler)
             {
-                var newFriends = ParsePage(unexploredVertex.Name, hyperlinkParser);
-                _scheduler.Add(newFriends);
-                yield return newFriends.Item1;
+                var explored = _parser.ParseFriends(unexploredVertex.Id);
+                _scheduler.Add(explored.Degrees);
+                yield return explored;
             }
             throw new Exception($"Domain {domain} not recognised");
         }
 
-        private Tuple<IExploredVertex, IEnumerable<IUnexploredVertex>> ParsePage(string userId, IHyperLinkParser parser)
-        {
-            Tuple<IExploredVertex, IEnumerable<IUnexploredVertex>> exploredTuple = parser.ParseFriends(userId);
-            return exploredTuple;
-        }
 
 
     }
