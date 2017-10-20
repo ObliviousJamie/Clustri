@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="AngleSharp" Version="0.9.9" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.6.1" />
   </ItemGroup>
 
 </Project>
