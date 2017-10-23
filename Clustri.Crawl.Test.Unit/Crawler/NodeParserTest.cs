@@ -15,6 +15,7 @@ namespace Clustri.Crawl.Test.Unit.Crawler
             var mockVertexFactory = new Mock<IVertexFactory>();
             var mockProfileFactory = new Mock<IProfileFactory>();
             var mockHyperlinkParser = new Mock<IHyperLinkParser>();
+            var mockVertexCache = new Mock<IVertexCache>();
 
             mockVertexFactory.Setup(v => v.Create(It.IsAny<IProfile>(), It.IsAny<IEnumerable<IProfile>>()))
                 .Returns(new Vertex("johndoe", Create_Profiles()));
@@ -23,9 +24,13 @@ namespace Clustri.Crawl.Test.Unit.Crawler
                 .Returns(new Profile("johndoe", @"http://steamcommunity.com/id/johndoe/friends/"));
 
             mockHyperlinkParser.Setup(h => h.ParseUser(It.IsAny<IProfile>()))
-                .Returns(new List<string> {@"http://steamcommunity.com/id/one/friends/", "http://steamcommunity.com/id/two/friends/"});
+                .Returns(new List<string> { @"http://steamcommunity.com/id/one/friends/", "http://steamcommunity.com/id/two/friends/" });
 
-            return new NodeParser(mockHyperlinkParser.Object, mockVertexFactory.Object, mockProfileFactory.Object);
+            mockVertexCache.Setup(v => v.Retrieve(It.IsAny<string>()))
+                .Returns((IVertex)null);
+
+            return new NodeParser(mockHyperlinkParser.Object, mockVertexFactory.Object, mockProfileFactory.Object,
+                mockVertexCache.Object);
         }
 
         private IEnumerable<IProfile> Create_Profiles()
@@ -39,7 +44,7 @@ namespace Clustri.Crawl.Test.Unit.Crawler
 
         private IVertex Create_Vertex()
         {
-           return new Vertex("johndoe", Create_Profiles()); 
+            return new Vertex("johndoe", Create_Profiles());
         }
 
 
@@ -82,6 +87,63 @@ namespace Clustri.Crawl.Test.Unit.Crawler
             var actual = enumerable.FirstOrDefault().Id;
             const string expected = @"johndoe";
             Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Saves_To_Cache()
+        {
+            var mockVertexFactory = new Mock<IVertexFactory>();
+            var mockProfileFactory = new Mock<IProfileFactory>();
+            var mockHyperlinkParser = new Mock<IHyperLinkParser>();
+            var mockVertexCache = new Mock<IVertexCache>();
+
+            mockVertexFactory.Setup(v => v.Create(It.IsAny<IProfile>(), It.IsAny<IEnumerable<IProfile>>()))
+                .Returns(new Vertex("johndoe", Create_Profiles()));
+
+            mockProfileFactory.Setup(p => p.Create("johndoe"))
+                .Returns(new Profile("johndoe", @"http://steamcommunity.com/id/johndoe/friends/"));
+
+            mockHyperlinkParser.Setup(h => h.ParseUser(It.IsAny<IProfile>()))
+                .Returns(new List<string> { @"http://steamcommunity.com/id/one/friends/", "http://steamcommunity.com/id/two/friends/" });
+
+            mockVertexCache.Setup(v => v.Retrieve(It.IsAny<string>()))
+                .Returns((IVertex)null);
+
+            var nodeParser =  new NodeParser(mockHyperlinkParser.Object, mockVertexFactory.Object, mockProfileFactory.Object,
+                mockVertexCache.Object);
+
+            var vertex = Create_Vertex();
+            var friends = nodeParser.Parse(vertex.Id);
+            mockVertexCache.Verify(v => v.Save(vertex));
+        }
+
+
+        [Test]
+        public void Gets_From_Cache()
+        {
+            var mockVertexFactory = new Mock<IVertexFactory>();
+            var mockProfileFactory = new Mock<IProfileFactory>();
+            var mockHyperlinkParser = new Mock<IHyperLinkParser>();
+            var mockVertexCache = new Mock<IVertexCache>();
+
+            mockVertexFactory.Setup(v => v.Create(It.IsAny<IProfile>(), It.IsAny<IEnumerable<IProfile>>()))
+                .Returns(new Vertex("johndoe", Create_Profiles()));
+
+            mockProfileFactory.Setup(p => p.Create("johndoe"))
+                .Returns(new Profile("johndoe", @"http://steamcommunity.com/id/johndoe/friends/"));
+
+            mockHyperlinkParser.Setup(h => h.ParseUser(It.IsAny<IProfile>()))
+                .Returns(new List<string> { @"http://steamcommunity.com/id/one/friends/", "http://steamcommunity.com/id/two/friends/" });
+
+            mockVertexCache.Setup(v => v.Retrieve(It.IsAny<string>()))
+                .Returns((IVertex)null);
+
+            var nodeParser =  new NodeParser(mockHyperlinkParser.Object, mockVertexFactory.Object, mockProfileFactory.Object,
+                mockVertexCache.Object);
+
+            var vertex = Create_Vertex();
+            nodeParser.Parse(vertex.Id);
+            mockVertexCache.Verify(v => v.Retrieve(vertex.Id));
         }
 
     }

@@ -10,16 +10,21 @@ namespace Clustri.Crawl.Crawler
         private readonly IHyperLinkParser _hyperLinkParser;
         private readonly IVertexFactory _vertexFactory;
         private readonly IProfileFactory _profileFactory;
+        private readonly IVertexCache _cache;
 
-        public NodeParser(IHyperLinkParser hyperLinkParser, IVertexFactory vertexFactory, IProfileFactory profileFactory)
+        public NodeParser(IHyperLinkParser hyperLinkParser, IVertexFactory vertexFactory, IProfileFactory profileFactory, IVertexCache cache)
         {
             _hyperLinkParser = hyperLinkParser;
             _vertexFactory = vertexFactory;
             _profileFactory = profileFactory;
+            _cache = cache;
         }
 
         public IVertex Parse(string userId)
         {
+            if (InCache(userId, out IVertex vertex))
+                return vertex;
+
             var profile = _profileFactory.Create(userId);
 
             //Parse root
@@ -27,14 +32,22 @@ namespace Clustri.Crawl.Crawler
             //Parse root children
             var degrees = enumerableLinks.Select(link => _profileFactory.Create(new Uri(link).AbsoluteUri));
 
-            return _vertexFactory.Create(profile, degrees);
+            vertex = _vertexFactory.Create(profile, degrees);
+            _cache.Save(vertex);
+
+            return vertex;
         }
 
-        //TODO implement caching of parsed pages
         public IEnumerable<IVertex> ParseFriends(IVertex vertex)
         {
-            var list = vertex.Degrees.Select(profile => Parse(profile.Id));
-            return list;
+            return vertex.Degrees.Select(profile => Parse(profile.Id));
+        }
+
+        private bool InCache(string id, out IVertex vertex)
+        {
+            vertex = _cache.Retrieve(id);
+            var exists = vertex != null;
+            return exists;
         }
     }
 }
