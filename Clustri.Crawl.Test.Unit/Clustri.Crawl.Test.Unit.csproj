@@ -60,6 +60,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crawler\MfcSchedulerTest.cs" />
     <Compile Include="Crawler\NodeParserTest.cs" />
     <Compile Include="Crawler\SteamHyperlinkParserTest.cs" />
     <Compile Include="Crawler\SteamLinkGeneratorTest.cs" />
@@ -70,6 +71,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
+    <Compile Include="Crawler\VisitSetTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

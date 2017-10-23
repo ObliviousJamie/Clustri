@@ -37,12 +37,17 @@ namespace Clustri.Crawl.Test.Unit.Crawler
             };
         }
 
+        private IVertex Create_Vertex()
+        {
+           return new Vertex("johndoe", Create_Profiles()); 
+        }
+
 
         [Test]
         public void Creates_With_Correct_Profile()
         {
             var sut = Create_Node_Parser();
-            var profile = sut.ParseFriends("johndoe");
+            var profile = sut.Parse("johndoe");
             var actual = profile.Id;
             const string expected = "johndoe";
             Assert.AreEqual(expected, actual);
@@ -52,7 +57,7 @@ namespace Clustri.Crawl.Test.Unit.Crawler
         public void Creates_With_Correct_Degree()
         {
             var sut = Create_Node_Parser();
-            var profile = sut.ParseFriends("johndoe");
+            var profile = sut.Parse("johndoe");
             var actual = profile.Degree;
             const int expected = 2;
             Assert.AreEqual(expected, actual);
@@ -63,12 +68,21 @@ namespace Clustri.Crawl.Test.Unit.Crawler
         public void Creates_With_Correct_DegreeItem()
         {
             var sut = Create_Node_Parser();
-            var profile = sut.ParseFriends("johndoe");
+            var profile = sut.Parse("johndoe");
             var actual = profile.Degrees.ToArray()[0].Link;
             const string expected = @"http://steamcommunity.com/id/one/friends/";
             Assert.AreEqual(expected, actual);
         }
 
+        [Test]
+        public void Creates_With_Enumerable()
+        {
+            var sut = Create_Node_Parser();
+            var enumerable = sut.ParseFriends(Create_Vertex());
+            var actual = enumerable.FirstOrDefault().Id;
+            const string expected = @"johndoe";
+            Assert.AreEqual(expected, actual);
+        }
 
     }
 }
