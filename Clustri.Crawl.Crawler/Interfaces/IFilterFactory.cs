@@ -2,6 +2,6 @@
 {
     public interface IFilterFactory<T>
     {
-        IFilter<T> Create();
+        ILogSet<T> Create();
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Clustri.Crawl.Crawler.Interfaces
 {
@@ -7,5 +8,6 @@ namespace Clustri.Crawl.Crawler.Interfaces
         int Degree { get; }
         string Id { get; }
         IEnumerable<IProfile> Degrees { get;  }
+        int Weight { get; set; }
     }
 }

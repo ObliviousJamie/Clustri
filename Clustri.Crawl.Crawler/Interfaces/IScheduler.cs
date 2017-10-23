@@ -2,9 +2,9 @@
 
 namespace Clustri.Crawl.Crawler.Interfaces
 {
-    public interface IScheduler : IEnumerable<IProfile>
+    public interface IScheduler : IEnumerable<IVertex>
     {
-        void Add(IProfile profile);
-        void Add(IEnumerable<IProfile> profiles);
+        void Add(IVertex vertex);
+        void Add(IEnumerable<IVertex> vertices);
     }
 }

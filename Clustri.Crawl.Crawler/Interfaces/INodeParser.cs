@@ -1,7 +1,10 @@
-﻿namespace Clustri.Crawl.Crawler.Interfaces
+﻿using System.Collections.Generic;
+
+namespace Clustri.Crawl.Crawler.Interfaces
 {
     public interface INodeParser
     {
-        IVertex ParseFriends(string userId);
+        IVertex Parse(string userId);
+        IEnumerable<IVertex> ParseFriends(IVertex vertex);
     }
 }
