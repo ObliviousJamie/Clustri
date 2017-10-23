@@ -33,8 +33,5 @@ namespace Clustri.Crawl.Crawler
             }
             throw new Exception($"Domain {domain} not recognised");
         }
-
-
-
     }
 }

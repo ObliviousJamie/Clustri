@@ -11,13 +11,16 @@ namespace Clustri.Crawl.Crawler
         private readonly IVertexFactory _vertexFactory;
         private readonly IProfileFactory _profileFactory;
         private readonly IVertexCache _cache;
+        private readonly IPause _pause;
 
-        public NodeParser(IHyperLinkParser hyperLinkParser, IVertexFactory vertexFactory, IProfileFactory profileFactory, IVertexCache cache)
+        public NodeParser(IHyperLinkParser hyperLinkParser, IVertexFactory vertexFactory,
+            IProfileFactory profileFactory, IVertexCache cache, IPause pause)
         {
             _hyperLinkParser = hyperLinkParser;
             _vertexFactory = vertexFactory;
             _profileFactory = profileFactory;
             _cache = cache;
+            _pause = pause;
         }
 
         public IVertex Parse(string userId)
@@ -27,6 +30,8 @@ namespace Clustri.Crawl.Crawler
 
             var profile = _profileFactory.Create(userId);
 
+            //Wait before processing
+            _pause.Pause();
             //Parse root
             var enumerableLinks = _hyperLinkParser.ParseUser(profile);
             //Parse root children
