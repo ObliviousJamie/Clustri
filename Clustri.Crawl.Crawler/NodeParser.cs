@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Clustri.Crawl.Crawler.Interfaces;
 
@@ -17,7 +18,7 @@ namespace Clustri.Crawl.Crawler
             _profileFactory = profileFactory;
         }
 
-        public IVertex ParseFriends(string userId)
+        public IVertex Parse(string userId)
         {
             var profile = _profileFactory.Create(userId);
 
@@ -27,6 +28,13 @@ namespace Clustri.Crawl.Crawler
             var degrees = enumerableLinks.Select(link => _profileFactory.Create(new Uri(link).AbsoluteUri));
 
             return _vertexFactory.Create(profile, degrees);
+        }
+
+        //TODO implement caching of parsed pages
+        public IEnumerable<IVertex> ParseFriends(IVertex vertex)
+        {
+            var list = vertex.Degrees.Select(profile => Parse(profile.Id));
+            return list;
         }
     }
 }

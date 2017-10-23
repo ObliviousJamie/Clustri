@@ -19,16 +19,17 @@ namespace Clustri.Crawl.Crawler
         public IEnumerable<IVertex> Crawl(Domain domain, string userId)
         {
             //Parse first page
-            var exploredVertex = _parser.ParseFriends(userId);
-            _scheduler.Add(exploredVertex.Degrees);
+            var exploredVertex = _parser.Parse(userId);
+            var rootFriends = _parser.ParseFriends(exploredVertex);
+            _scheduler.Add(rootFriends);
 
             yield return exploredVertex;
             //Next scheduled pages
             foreach (var unexploredVertex in _scheduler)
             {
-                var explored = _parser.ParseFriends(unexploredVertex.Id);
-                _scheduler.Add(explored.Degrees);
-                yield return explored;
+                var friends = _parser.ParseFriends(unexploredVertex);
+                _scheduler.Add(friends);
+                yield return unexploredVertex;
             }
             throw new Exception($"Domain {domain} not recognised");
         }
