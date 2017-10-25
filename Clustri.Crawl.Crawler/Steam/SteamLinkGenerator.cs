@@ -9,13 +9,20 @@ namespace Clustri.Crawl.Crawler.Steam
         public string TransformToFriendLink(string user, string prefix = null)
         {
             if (String.IsNullOrEmpty(prefix))
-                prefix = "id/";
+                prefix = "id";
             if(string.IsNullOrEmpty(user))
                 throw new Exception("User does not exist exception");
 
             var steamLink = @"http://steamcommunity.com";
             var friends = @"friends";
-            return $"{steamLink}/{prefix}{user}/{friends}/";
+            var link = $"{steamLink}/{prefix}/{user}/{friends}/";
+            Uri realUri;
+
+            var successfulUri = Uri.TryCreate(link, UriKind.Absolute, out realUri);
+            if(!successfulUri)
+                throw new Exception("Could not create uri");
+
+            return realUri.AbsoluteUri;
         }
 
         public string TransformToFriendLink(Uri profileLink)
