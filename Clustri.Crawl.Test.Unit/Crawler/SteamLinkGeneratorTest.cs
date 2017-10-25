@@ -15,7 +15,7 @@ namespace Clustri.Crawl.Test.Unit.Crawler
         public void TransformUserTest()
         {
             var sut = CreateLinkGenerator();
-            var actual = sut.TransformUser("johndoe");
+            var actual = sut.TransformToFriendLink("johndoe");
             Assert.AreEqual(@"http://steamcommunity.com/id/johndoe/friends/", actual);
         }
 
@@ -24,7 +24,7 @@ namespace Clustri.Crawl.Test.Unit.Crawler
         {
             var linkGen = CreateLinkGenerator();
             var uri = new Uri(@"http://steamcommunity.com/id/johndoe/friends/");
-            var actual = linkGen.TransformLink(uri);
+            var actual = linkGen.TransformToUser(uri);
             Assert.AreEqual("johndoe", actual);
         }
 
@@ -33,7 +33,7 @@ namespace Clustri.Crawl.Test.Unit.Crawler
         {
             var linkGen = CreateLinkGenerator();
             var uri = new Uri(@"http://steamcommunity.com/id/john_doe/friends/");
-            var actual = linkGen.TransformLink(uri);
+            var actual = linkGen.TransformToUser(uri);
             Assert.AreEqual("john_doe", actual);
         }
     }
