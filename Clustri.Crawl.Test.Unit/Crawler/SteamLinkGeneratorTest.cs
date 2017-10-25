@@ -20,6 +20,49 @@ namespace Clustri.Crawl.Test.Unit.Crawler
         }
 
         [Test]
+        public void TransformToFriendLink_With_Uri_Test()
+        {
+            var sut = CreateLinkGenerator();
+            var uri = new Uri(@"http://steamcommunity.com/id/johndoe");
+            var actual = sut.TransformToFriendLink(uri);
+            Assert.AreEqual(@"http://steamcommunity.com/id/johndoe/friends/", actual);
+        }
+        
+        [Test]
+        public void TransformToFriendLink_With_Uri_With_No_Slash()
+        {
+            var sut = CreateLinkGenerator();
+            var uri = new Uri(@"http://steamcommunity.com/id/johndoe");
+            var actual = sut.TransformToFriendLink(uri);
+            Assert.AreEqual(@"http://steamcommunity.com/id/johndoe/friends/", actual);
+        }
+
+        [Test]
+        public void TransformToFriendLink_With_Uri_Profile_Test()
+        {
+            var sut = CreateLinkGenerator();
+            var uri = new Uri(@"http://steamcommunity.com/profiles/johndoe");
+            var actual = sut.TransformToFriendLink(uri);
+            Assert.AreEqual(@"http://steamcommunity.com/profiles/johndoe/friends/", actual);
+        }
+
+        [Test]
+        public void TransformToFriendLink_With_Prefix_Id()
+        {
+            var sut = CreateLinkGenerator();
+            var actual = sut.TransformToFriendLink("johndoe", "id");
+            Assert.AreEqual(@"http://steamcommunity.com/id/johndoe/friends/", actual);
+        }
+
+        [Test]
+        public void TransformToFriendLink_With_Prefix_Illegal_Chars()
+        {
+            var sut = CreateLinkGenerator();
+            var actual = sut.TransformToFriendLink("johndoe", " id ");
+            Assert.AreEqual(@"http://steamcommunity.com/%20id%20/johndoe/friends/", actual);
+        }
+
+        [Test]
         public void TransformLinkTest()
         {
             var linkGen = CreateLinkGenerator();
