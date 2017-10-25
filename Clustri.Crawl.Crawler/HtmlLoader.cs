@@ -4,7 +4,7 @@ using Clustri.Crawl.Crawler.Interfaces;
 
 namespace Clustri.Crawl.Crawler
 {
-    internal class HtmlLoader : IHtmlDownloader
+    public class HtmlLoader : IHtmlDownloader
     {
 
         public string Load(string address)

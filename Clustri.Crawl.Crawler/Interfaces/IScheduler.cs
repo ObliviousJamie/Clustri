@@ -6,5 +6,6 @@ namespace Clustri.Crawl.Crawler.Interfaces
     {
         void Add(IVertex vertex);
         void Add(IEnumerable<IVertex> vertices);
+        void Remove(IVertex vertex);
     }
 }

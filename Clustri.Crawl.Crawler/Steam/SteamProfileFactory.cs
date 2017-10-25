@@ -12,22 +12,16 @@ namespace Clustri.Crawl.Crawler.Steam
             _linkGenerator = linkGenerator;
         }
 
-
-        public IProfile Create(string name)
-        {
-            var link = _linkGenerator.TransformUser(name);
-            return new Profile(name, link);
-        }
-
         public IProfile Create(string name, string link)
         {
             return new Profile(name, link);
         }
 
-        public IProfile Create(Uri link)
+        public IProfile Create(Uri incompleteUri)
         {
-            var name = _linkGenerator.TransformLink(link);
-            return new Profile(name, link.AbsoluteUri);
+            var friendLink = _linkGenerator.TransformToFriendLink(incompleteUri);
+            var name = _linkGenerator.TransformToUser(new Uri(friendLink));
+            return Create(name, friendLink);
         }
     }
 }

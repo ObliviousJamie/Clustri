@@ -23,19 +23,20 @@ namespace Clustri.Crawl.Crawler
             _pause = pause;
         }
 
-        public IVertex Parse(string userId)
+        public IVertex Parse(Uri userLink)
         {
-            if (InCache(userId, out IVertex vertex))
-                return vertex;
 
-            var profile = _profileFactory.Create(userId);
+            var profile = _profileFactory.Create(userLink);
+
+            if (InCache(profile.Id, out IVertex vertex))
+                return vertex;
 
             //Wait before processing
             _pause.Pause();
             //Parse root
             var enumerableLinks = _hyperLinkParser.ParseUser(profile);
             //Parse root children
-            var degrees = enumerableLinks.Select(link => _profileFactory.Create(new Uri(link).AbsoluteUri));
+            var degrees = enumerableLinks.Select(link => _profileFactory.Create(new Uri(link)));
 
             vertex = _vertexFactory.Create(profile, degrees);
             _cache.Save(vertex);
@@ -45,7 +46,7 @@ namespace Clustri.Crawl.Crawler
 
         public IEnumerable<IVertex> ParseFriends(IVertex vertex)
         {
-            return vertex.Degrees.Select(profile => Parse(profile.Id));
+            return vertex.Degrees.Select(profile => Parse(new Uri(profile.Link)));
         }
 
         private bool InCache(string id, out IVertex vertex)

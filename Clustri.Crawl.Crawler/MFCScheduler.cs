@@ -23,7 +23,6 @@ namespace Clustri.Crawl.Crawler
         public IEnumerator<IVertex> GetEnumerator()
         {
             var next = _queue.Aggregate((first, second) => first.Value > second.Value ? first : second).Key;
-            _visited.Add(next);
             yield return next;
         }
 
@@ -35,10 +34,13 @@ namespace Clustri.Crawl.Crawler
         public void Add(IVertex vertex)
         {
             var unexplored = !_visited.Exists(vertex);
-            if (unexplored)
-            {
+
+            //Private profile or no friends - do not explore
+            if(vertex.Degree == 0)
+                _visited.Add(vertex);
+
+            if (unexplored && vertex.Degree > 0)
                 UpdateReferenceScore(vertex);
-            }
         }
 
         public void Add(IEnumerable<IVertex> vertices)
@@ -47,6 +49,12 @@ namespace Clustri.Crawl.Crawler
             {
                 Add(vertex);
             }
+        }
+
+        public void Remove(IVertex vertex)
+        {
+            _visited.Add(vertex);
+            _queue.Remove(vertex);
         }
 
         private void UpdateReferenceScore(IVertex vertex)

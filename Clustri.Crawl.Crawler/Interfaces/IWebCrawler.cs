@@ -1,6 +1,10 @@
-﻿namespace Clustri.Crawl.Crawler.Interfaces
+﻿using System;
+using System.Collections.Generic;
+
+namespace Clustri.Crawl.Crawler.Interfaces
 {
-    interface IWebCrawler
+    public interface IWebCrawler
     {
+        IEnumerable<IVertex> Crawl(Uri user);
     }
 }

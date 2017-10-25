@@ -13,10 +13,10 @@ namespace Clustri.Crawl.Crawler
 
         public Vertex(string id, IEnumerable<IProfile> degrees)
         {
-            var enumerable = degrees as IProfile[] ?? degrees.ToArray();
+            var array = degrees.ToArray();
             Id = id;
-            Degrees = enumerable;
-            Degree = enumerable.Length;
+            Degrees = array;
+            Degree = array.Length;
         }
 
         protected bool Equals(Vertex other)
