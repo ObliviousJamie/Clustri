@@ -9,7 +9,7 @@ namespace Clustri.Crawl.Crawler
         public int Degree { get; }
         public string Id { get; }
         public IEnumerable<IProfile> Degrees { get; }
-        public int Weight { get; set; } = -1;
+        public double Weight { get; set; } = -1;
 
         public Vertex(string id, IEnumerable<IProfile> degrees)
         {

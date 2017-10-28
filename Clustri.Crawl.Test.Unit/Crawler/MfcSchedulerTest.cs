@@ -110,8 +110,8 @@ namespace Clustri.Crawl.Test.Unit.Crawler
             sut.Add(vThree);
             sut.Add(vOne);
             sut.Add(vTwo);
-            IVertex expected = sut.FirstOrDefault();
-            Assert.AreEqual(expected, vOne);
+            IVertex actual = sut.FirstOrDefault();
+            Assert.AreEqual(vOne, actual);
         }
 
         [Test]
@@ -128,8 +128,32 @@ namespace Clustri.Crawl.Test.Unit.Crawler
             sut.Add(vThree);
             sut.Add(vThree);
             sut.Add(vTwo);
-            IVertex expected = sut.FirstOrDefault();
-            Assert.AreEqual(expected, vThree);
+            IVertex actual = sut.FirstOrDefault();
+            Assert.AreEqual(vThree, actual);
+        }
+
+        [Test]
+        public void Vertex_Weight_Updated()
+        {
+            const double expected = 1.0;
+            const double expected2 = 0.5;
+            var profilesTwo = new List<IProfile> { new Profile("1", "1"), new Profile("4", "4") };
+            var profilesThree = new List<IProfile> { new Profile("1", "1"), new Profile("2", "2"), new Profile("3", "3") };
+            var vTwo = new Vertex("vTwo", profilesTwo);
+            var vThree = new Vertex("vThree", profilesThree);
+
+            var sut = Create();
+            sut.Add(vThree);
+            sut.Add(vThree);
+            sut.Add(vThree);
+            sut.Add(vTwo);
+            IVertex vertex = sut.FirstOrDefault();
+            sut.Remove(vertex);
+            IVertex vertex2 = sut.FirstOrDefault();
+            var actual = vertex.Weight;
+            var actual2 = vertex2.Weight;
+            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected2, actual2);
         }
     }
 }

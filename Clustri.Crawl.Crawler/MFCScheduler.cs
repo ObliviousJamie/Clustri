@@ -69,6 +69,7 @@ namespace Clustri.Crawl.Crawler
             else
                 curRefScore = oneReference;
 
+            vertex.Weight = curRefScore;
             _queue[vertex] = curRefScore;
         }
     }

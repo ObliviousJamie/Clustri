@@ -8,6 +8,6 @@ namespace Clustri.Crawl.Crawler.Interfaces
         int Degree { get; }
         string Id { get; }
         IEnumerable<IProfile> Degrees { get;  }
-        int Weight { get; set; }
+        double Weight { get; set; }
     }
 }
