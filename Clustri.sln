@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clustri.Core", "Clustri.Core\Clustri.Core.csproj", "{ED069BB5-D7CA-48EC-8F57-77ECBCC1DDAB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clustri.Neo4J", "Clustri.Neo4J\Clustri.Neo4J.csproj", "{D64C0E4B-2B4E-431E-BAA6-D012FBF5A273}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clustri.Crawl.Crawler", "Clustri.Crawl.Crawler\Clustri.Crawl.Crawler.csproj", "{9017C333-6E50-4F39-843F-3FF6C34BC93B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clustri.Crawl.Test.Unit", "Clustri.Crawl.Test.Unit\Clustri.Crawl.Test.Unit.csproj", "{E1F321CE-1E89-4C37-839F-69B9F22848C9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clustri.Crawl.Console", "Clustri.Crawl.Console\Clustri.Crawl.Console.csproj", "{88225F62-97FB-4386-A1BB-84538451CEB9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clustri.Repository", "Clustri.Repository\Clustri.Repository.csproj", "{283127CC-0CCD-48DB-AAD3-69B7709241D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clustri.Repository.Test.Unit", "Clustri.Repository.Test.Unit\Clustri.Repository.Test.Unit.csproj", "{612B3FEB-C45A-4495-B4D7-204B2A01F3CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ED069BB5-D7CA-48EC-8F57-77ECBCC1DDAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED069BB5-D7CA-48EC-8F57-77ECBCC1DDAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED069BB5-D7CA-48EC-8F57-77ECBCC1DDAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED069BB5-D7CA-48EC-8F57-77ECBCC1DDAB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D64C0E4B-2B4E-431E-BAA6-D012FBF5A273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D64C0E4B-2B4E-431E-BAA6-D012FBF5A273}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D64C0E4B-2B4E-431E-BAA6-D012FBF5A273}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D64C0E4B-2B4E-431E-BAA6-D012FBF5A273}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9017C333-6E50-4F39-843F-3FF6C34BC93B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9017C333-6E50-4F39-843F-3FF6C34BC93B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9017C333-6E50-4F39-843F-3FF6C34BC93B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +31,14 @@ Global
 		{88225F62-97FB-4386-A1BB-84538451CEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88225F62-97FB-4386-A1BB-84538451CEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88225F62-97FB-4386-A1BB-84538451CEB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{283127CC-0CCD-48DB-AAD3-69B7709241D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{283127CC-0CCD-48DB-AAD3-69B7709241D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{283127CC-0CCD-48DB-AAD3-69B7709241D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{283127CC-0CCD-48DB-AAD3-69B7709241D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612B3FEB-C45A-4495-B4D7-204B2A01F3CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612B3FEB-C45A-4495-B4D7-204B2A01F3CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612B3FEB-C45A-4495-B4D7-204B2A01F3CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612B3FEB-C45A-4495-B4D7-204B2A01F3CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
