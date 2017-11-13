@@ -17,6 +17,7 @@ namespace Clustri.Crawl.Console
             container.Register<IWebCrawler, GeneralCrawler>();
             container.Register<INodeParser, NodeParser>();
             container.Register<IScheduler, MfcScheduler>();
+            //container.Register<IScheduler>((() => new BfsScheduler(new VisitSet<IVertex>(), new Queue<IVertex>())));
             container.Register<IHyperLinkParser, SteamHyperlinkParser>();
             container.Register<IProfileFactory, SteamProfileFactory>();
             container.Register<IVertexCache>(() => new VertexCache(cacheSize));
