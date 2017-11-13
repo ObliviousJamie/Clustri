@@ -1,26 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
-using Clustri.Repository.Core;
+using Clustri.Repository.Core.Interfaces;
 using Neo4jClient;
 
 namespace Clustri.Repository.Implementation.Repository
 {
     public class Repository<TNode> : IRepository<TNode> where TNode : class
     {
-        private readonly IGraphClient _client;
+        protected readonly IGraphClient Client;
         private readonly string _type;
 
         public Repository(IGraphClient client)
         {
-            _client = client;
+            Client = client;
             _type = typeof(TNode).ToString();
         }
 
         public IEnumerable<TNode> All()
         {
-            var query = _client.Cypher
+            var query = Client.Cypher
                 .Match($"(node:{_type})")
                 .Return<TNode>("id(node), node.data");
 
@@ -29,7 +27,7 @@ namespace Clustri.Repository.Implementation.Repository
 
         public virtual void Add(TNode node)
         {
-            _client.Cypher
+            Client.Cypher
                 .Create($"(node:{_type} {{node}})")
                 .WithParam("node", node)
                 .ExecuteWithoutResults();
@@ -37,7 +35,7 @@ namespace Clustri.Repository.Implementation.Repository
 
         public bool Contains(int id)
         {
-            var query = _client.Cypher
+            var query = Client.Cypher
                 .Match($"(:{_type} {{node}})")
                 .Where($"id(n) = {id}")
                 .Return<TNode>("node");
@@ -47,7 +45,7 @@ namespace Clustri.Repository.Implementation.Repository
 
         public void Remove(int id)
         {
-            _client.Cypher
+            Client.Cypher
                 .Match($"(n:{_type})")
                 .Where($"id(n) = {id}")
                 .DetachDelete($"n")

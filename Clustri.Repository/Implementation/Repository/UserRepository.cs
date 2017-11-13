@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Clustri.Repository.Core;
+using Clustri.Repository.Core.Interfaces;
 using Clustri.Repository.Entities;
 using Neo4jClient;
 
@@ -7,11 +7,8 @@ namespace Clustri.Repository.Implementation.Repository
 {
     public class UserRepository : Repository<User>, IUserRepository
     {
-        private readonly IGraphClient _client;
-
         public UserRepository(IGraphClient client) : base(client)
         {
-            _client = client;
         }
 
         public override void Add(User user)
@@ -19,7 +16,7 @@ namespace Clustri.Repository.Implementation.Repository
             //Overwrite existing data or update
             if (user.Weight > 0)
             {
-                _client.Cypher
+                Client.Cypher
                     .Merge("(user:User { userId: {userId} })")
                     .Set("user.weight = {weight}")
                     .WithParams(new
@@ -31,7 +28,7 @@ namespace Clustri.Repository.Implementation.Repository
             }
             else
             {
-                _client.Cypher
+                Client.Cypher
                     .Merge("(user:User { userId: {userId} })")
                     .OnCreate()
                     .Set("user.userId = {userId}")
@@ -46,7 +43,7 @@ namespace Clustri.Repository.Implementation.Repository
 
         public void DeleteByUser(User user)
         {
-            _client.Cypher
+            Client.Cypher
                 .Match("(user1:User)")
                 .Where((User user1) => user1.UserId == user.UserId)
                 .DetachDelete("user1")
@@ -55,7 +52,7 @@ namespace Clustri.Repository.Implementation.Repository
 
         public void RelateFriendsByUser(User user, User friend)
         {
-            _client.Cypher
+            Client.Cypher
                 .Match("(user1:User)", "(user2:User)")
                 .Where((User user1) => user1.UserId == user.UserId)
                 .AndWhere((User user2) => user2.UserId == friend.UserId)
@@ -65,7 +62,7 @@ namespace Clustri.Repository.Implementation.Repository
 
         public IEnumerable<User> GetAllFriends(User user)
         {
-            var query = _client.Cypher
+            var query = Client.Cypher
                 .Match("(user:User)-[r:FRIENDS_WITH]-(friend:User)")
                 .Where($"user.UserId = \"{user.UserId}\"")
                 .Return<User>("friend");
