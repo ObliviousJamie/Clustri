@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.ExceptionServices;
 using Clustri.Crawl.Crawler;
 using Clustri.Crawl.Crawler.Interfaces;
 using Moq;
