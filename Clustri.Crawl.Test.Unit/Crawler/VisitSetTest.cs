@@ -31,7 +31,7 @@ namespace Clustri.Crawl.Test.Unit.Crawler
             var vertex = new Vertex("johndoe", new List<IProfile>{new Profile("one", "two")});
             var sut = Create();
             var exists = sut.Exists(vertex);
-            Assert.IsTrue(exists);
+            Assert.IsFalse(exists);
         }
     }
 }
