@@ -5,7 +5,7 @@ using Clustri.Crawl.Crawler.Interfaces;
 using Clustri.Repository.Core.Interfaces;
 using Clustri.Repository.Entities;
 
-namespace Clustri.Crawl.Console
+namespace Clustri.Crawl.Console.Mfc
 {
     public class MfcCrawler
     {
