@@ -9,7 +9,7 @@ namespace Clustri.Crawl.Console
         static void Main(string[] args)
         {
             var ioc = new IocContainer();
-            var crawler = ioc.SteamCrawler(1000, 200);
+            var crawler = ioc.SteamCrawler(10000, 300);
 
             var whitespace = new String(' ', 5);
 
@@ -17,6 +17,10 @@ namespace Clustri.Crawl.Console
 
             var unitOfWork = new UnitOfWorkFactory("http://localhost:7474/db/data", args[0], args[1]).Create();
             var userRepo = unitOfWork.Users;
+
+            var maxDepth = 100;
+            var depth = 0;
+
 
             foreach (var vertex in crawler.Crawl(link))
             {
@@ -32,6 +36,9 @@ namespace Clustri.Crawl.Console
 
                 userRepo.Add(newUser);
 
+                depth++;
+                if (depth >= maxDepth)
+                    break;
 
                 foreach (var profile in vertex.Degrees)
                 {
@@ -45,8 +52,9 @@ namespace Clustri.Crawl.Console
                     userRepo.Add(friend);
                     userRepo.RelateFriendsByUser(newUser, friend);
                 }
-
             }
+
+
         }
     }
 }
