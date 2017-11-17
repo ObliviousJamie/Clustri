@@ -8,5 +8,8 @@ namespace Clustri.Repository.Entities
         public string UserId { get; set; }
         [JsonProperty(PropertyName = "weight")]
         public double Weight { get; set; }
+        [JsonProperty(PropertyName = "community")]
+        public int Community  { get; set; }
+
     }
 }
