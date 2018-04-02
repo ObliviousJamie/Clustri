@@ -11,12 +11,15 @@ namespace Clustri.Crawl.Console.Mfc
     {
         private readonly IUserRepository _userRepository;
         private readonly IPrinter _printer;
+        private readonly ICommunityDecider _communityDecider;
         private readonly IWebCrawler crawler;
 
-        public MfcCrawler(IocContainer ioc, IUserRepository userRepository, IPrinter printer, int waitTime = 200)
+        public MfcCrawler(IocContainer ioc, IUserRepository userRepository, IPrinter printer, 
+            ICommunityDecider communityDecider, int waitTime = 200)
         {
             _userRepository = userRepository;
             _printer = printer;
+            _communityDecider = communityDecider;
             crawler = ioc.SteamCrawler(1000, waitTime);
         }
 
@@ -24,12 +27,20 @@ namespace Clustri.Crawl.Console.Mfc
         public void Crawl(int maxDepth, Uri link)
         {
             var depth = 0;
+            var lastWeight = 0.5;
+            var community = 0;
 
             foreach (var vertex in crawler.Crawl(link))
             {
                 _printer.Print(vertex);
 
-                var newUser = new User { UserId = vertex.Id, Weight = vertex.Weight };
+                var shouldCreate = _communityDecider.ShouldCreateCommunity(lastWeight, vertex.Weight);
+                lastWeight = vertex.Weight;
+
+                if (shouldCreate)
+                    community++;
+
+                var newUser = new User { UserId = vertex.Id, Weight = vertex.Weight, Community = community};
 
                 _userRepository.Add(newUser);
 
@@ -48,7 +59,7 @@ namespace Clustri.Crawl.Console.Mfc
             {
                 _printer.Print(profile, true);
 
-                var friend = new User { UserId = profile.Id };
+                var friend = new User { UserId = profile.Id, Community = parent.Community};
 
                 _userRepository.Add(friend);
                 _userRepository.RelateFriendsByUser(parent, friend);

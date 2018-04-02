@@ -13,7 +13,7 @@ namespace Clustri.Repository.Implementation
         public UnitOfWork(IGraphClientAdapter graphClientAdapter)
         {
             _graphClientAdapter = graphClientAdapter;
-            Users = new UserRepository(_graphClientAdapter.GraphClient);
+            Users = new CommunityUserRepository(_graphClientAdapter.GraphClient);
         }
 
         public void Dispose()
