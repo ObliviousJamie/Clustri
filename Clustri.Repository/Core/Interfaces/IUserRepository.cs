@@ -10,5 +10,9 @@ namespace Clustri.Repository.Core.Interfaces
         void RelateFriendsByUser(User user, User friend);
 
         IEnumerable<User> GetAllFriends(User user);
+
+        IEnumerable<User> AllUsers();
+
+        IEnumerable<User> AllSeeds();
     }
 }

@@ -9,7 +9,7 @@ namespace Clustri.Repository.Entities
         [JsonProperty(PropertyName = "weight")]
         public double Weight { get; set; }
         [JsonProperty(PropertyName = "community")]
-        public int Community  { get; set; }
+        public bool Community  { get; set; }
 
     }
 }

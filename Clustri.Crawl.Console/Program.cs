@@ -16,7 +16,11 @@ namespace Clustri.Crawl.Console
             var mfc = new MfcCrawler(ioc, userRepo, new Printer(5), new CommunityDecider(), 500);
 
             var link = new Uri(@"http://steamcommunity.com/id/faucomte97");
-            mfc.Crawl(100, link);
+            mfc.Crawl(2, link);
+
+            var output = new Output(userRepo, @"C:\Users\Jamie\Documents\University\Csharp_output");
+            output.Write();
+
         }
     }
 }

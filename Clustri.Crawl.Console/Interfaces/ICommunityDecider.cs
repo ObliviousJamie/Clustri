@@ -2,6 +2,6 @@
 {
     public interface ICommunityDecider
     {
-        bool ShouldCreateCommunity(double lastWeight, double currentWeight);
+        bool ShouldCreateCommunity(double lastWeight, double currentWeight, double peakThreshold = 0.1);
     }
 }

@@ -28,17 +28,17 @@ namespace Clustri.Crawl.Console.Mfc
         {
             var depth = 0;
             var lastWeight = 0.5;
-            var community = 0;
 
             foreach (var vertex in crawler.Crawl(link))
             {
+                var community = false;
                 _printer.Print(vertex);
 
                 var shouldCreate = _communityDecider.ShouldCreateCommunity(lastWeight, vertex.Weight);
                 lastWeight = vertex.Weight;
 
                 if (shouldCreate)
-                    community++;
+                    community = true;
 
                 var newUser = new User { UserId = vertex.Id, Weight = vertex.Weight, Community = community};
 

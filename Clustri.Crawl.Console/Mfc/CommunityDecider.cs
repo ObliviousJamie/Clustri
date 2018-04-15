@@ -1,4 +1,5 @@
 ﻿using Clustri.Crawl.Console.Interfaces;
+using Clustri.Repository.Implementation.Repository;
 
 namespace Clustri.Crawl.Console.Mfc
 {
@@ -7,14 +8,14 @@ namespace Clustri.Crawl.Console.Mfc
         private double min = 0.2;
         private double max = 0.4;
 
-        public bool ShouldCreateCommunity(double lastWeight, double currentWeight)
+        public bool ShouldCreateCommunity(double lastWeight, double currentWeight, double peakThreshold = 0.1)
         {
             if (currentWeight < lastWeight)
             {
-                var halfDifference = (max - min) / 2.0;
-                var nodeDifference = lastWeight - currentWeight;
+                var peakAddition = currentWeight + (currentWeight * peakThreshold) ;
 
-                if (nodeDifference > halfDifference)
+                //Check current weight is X percent less than last value
+                if (peakAddition < lastWeight)
                 {
                     SetWeight(currentWeight);
                     return true;

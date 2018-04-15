@@ -64,10 +64,31 @@ namespace Clustri.Repository.Implementation.Repository
         {
             var query = Client.Cypher
                 .Match("(user:User)-[r:FRIENDS_WITH]-(friend:User)")
-                .Where($"user.UserId = \"{user.UserId}\"")
+                .Where($"user.userId = \"{user.UserId}\"")
                 .Return<User>("friend");
 
             return query.Results;
         }
+
+        public IEnumerable<User> AllUsers()
+        {
+            var query = Client.Cypher
+                .Match($"(user:User)")
+                .Where($"user.userId <> \"null\"")
+                .Return<User>("user");
+
+            return query.Results;
+        }
+
+        public IEnumerable<User> AllSeeds()
+        {
+            var query = Client.Cypher
+                .Match($"(node:User)")
+                .Where($"node.community = true")
+                .Return<User>("node");
+
+            return query.Results;
+        }
+
     }
 }
