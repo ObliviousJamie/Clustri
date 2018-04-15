@@ -12,7 +12,5 @@ namespace Clustri.Repository.Core.Interfaces
         IEnumerable<User> GetAllFriends(User user);
 
         IEnumerable<User> AllUsers();
-
-        IEnumerable<User> AllSeeds();
     }
 }

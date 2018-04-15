@@ -80,15 +80,5 @@ namespace Clustri.Repository.Implementation.Repository
             return query.Results;
         }
 
-        public IEnumerable<User> AllSeeds()
-        {
-            var query = Client.Cypher
-                .Match($"(node:User)")
-                .Where($"node.community = true")
-                .Return<User>("node");
-
-            return query.Results;
-        }
-
     }
 }
